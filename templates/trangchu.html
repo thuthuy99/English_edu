@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>English Education</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='trangchu.css') }}">
+    <link rel="stylesheet" href="static/grid.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header id="home"
+        style="background-image:linear-gradient(45deg, rgba(13, 109, 133, 0.6),rgba(23,233,224,0.7)),url(https://i.imgur.com/NYrvfvF.jpg);">
+        <nav class="sticky">
+            <a href="#home"><img class="logo" src="https://i.imgur.com/cQDRaOt.png" alt="logo"></a>
+            <ul class="main-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="heading-main-box">
+                <h1>We will study<br>English together.<br>
+                    So join with us.
+                </h1>
+                <a href="{{ linkDangnhap }}" class="btn">Join us</a>
+            </div>
+        </div>
+    </header>
+    <section class="about-section" id="about">
+        <div>
+            <h2>About Us</h2>
+            <p class="p-long">
+                We are people that are studying English by ourselves, we believe that you don't need to pay so much
+                money for being good at English, we're here to help you.
+            </p>
+        </div>
+        <div class="row1">
+            <div class="col span-1-of-3 about-picture">
+                <img src="https://i.imgur.com/AxT16dy.jpg" alt="activities1">
+                <p class="picture-title">
+                    Team working
+                </p>
+            </div>
+            <div class="col span-1-of-3 about-picture">
+                <img src="https://i.imgur.com/7NakwH2.jpg" alt="activities2">
+                <p class="picture-title">
+                    Funny class
+                </p>
+            </div>
+            <div class="col span-1-of-3 about-picture">
+                <img src="https://i.imgur.com/6bAyRRs.jpg" alt="activities3">
+                <p class="picture-title">
+                    Be confident
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section" id="contact" style="background-image: linear-gradient(45deg, rgba(59,139,235,0.6),rgba(23,233,224,0.7)), url(https://i.imgur.com/ukg4I7Q.jpg);">
+            <h2>Contact</h2>
+            <div class="col span-1-of-2">
+                <ul class="information">
+                    <li><i class="fas fa-map-marker-alt small-icon"></i>Address: G2, University of Engineering and
+                        Technology</li>
+                    <li><i class="fas fa-envelope small-icon"></i>Email: english.education@gmail.com</li>
+                    <li><i class="fas fa-phone small-icon"></i>SĐT: (+084)099-012-3456</li>
+                </ul>
+                <ul class="social-icons">
+                    <li><i class="fab fa-facebook"></i></li>
+                    <li><i class="fab fa-twitter-square"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-google-plus-square"></i></li>
+                </ul>
+
+            </div>
+    </section>
+    <footer>
+        <p>
+            Copyright &copy; 2019 by TEAM NINE
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="static/jquery.waypoints.min.js"></script>
+    {% block body %}
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trang hoc</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tranghoc.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header id="home">
+            <nav class="sticky">
+                    <a href="#"><img class="logo" src="https://i.imgur.com/cQDRaOt.png" alt="logo"></a>
+                    <ul class="main-nav">
+                        <li><a href="{{ linktrangchu }}">Home</a></li>
+                        <li><a href="#courses">Courses</a></li> 
+                    </ul>
+            </nav>
+            <div class="clearfix"></div>
+        </header>    
+        <div class="about-picture">
+            <img src="https://i.imgur.com/Iicie0T.jpg" alt="activities1">
+        </div>
+        <div class="heading-main-box">
+            <h1>Do you know?</h1>
+            <h2>
+                    Reading and listening are two skills that will help you develop the ability to sense language. They help you discover and memorize a lot of say, many words. After that, your brain can imitate and you can say what you think correctly about how to use words like grammar.
+                    <br>This course will help you practice reading and listening skills at all levels.
+            </h2>
+        </div>
+        <section class="courses-section" id="courses" style="height:800px;">
+            <h3>Courses</h3>
+            <div class="row1">
+                <div class="col span-1-of-2">
+                    <div class="course-box">
+                        <h4>Reading</h4>
+                        <ul class="reading">
+                            {% for item in reading %}
+                            <li><a href="{{ item.linkRead }}">Lesson {{ item.id }}: {{ item.ten }}:</a> {{ item.mo_ta }}</li>
+                            {% endfor %}
+                        </ul>   
+                    </div>
+                <div class="col span-1-of-2">
+                    <div class="course-box">
+                        <h4>Listening</h4>
+                        <ul class="listening">
+                            {% for item in listening %}
+                            <li><a href="{{ item.linkListen }}">Lesson {{ item.id }}: {{ item.ten }}:</a> {{ item.mo_ta }} </li>
+                            {% endfor %}
+                        </ul>
+                    </div>    
+                </div>
+            </div>
+        </section>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+        <script src="vendors/js/jquery.waypoints.min.js"></script>
+        <script src="resources/js/scripts.js"></script>
+    </body>
+</html>    
